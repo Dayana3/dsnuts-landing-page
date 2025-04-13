@@ -60,7 +60,7 @@
     section {
       padding: 40px 20px;
     }
-    .roadmap, .tokenomics, .chart, .whybuy {
+    .roadmap, .tokenomics, .chart, .whybuy, .gallery, .airdrop {
       max-width: 900px;
       margin: 0 auto 60px;
       text-align: left;
@@ -69,7 +69,7 @@
       border-radius: 12px;
       box-shadow: 0 0 10px #00000055;
     }
-    .roadmap h2, .tokenomics h2, .chart h2, .whybuy h2 {
+    .roadmap h2, .tokenomics h2, .chart h2, .whybuy h2, .gallery h2, .airdrop h2 {
       text-align: center;
       font-size: 2rem;
       margin-bottom: 20px;
@@ -86,7 +86,7 @@
       border-left: 5px solid #00ffe0;
       border-radius: 8px;
     }
-    .chart p, .whybuy p {
+    .chart p, .whybuy p, .airdrop p {
       font-size: 1.1rem;
       color: #ccc;
       margin-bottom: 15px;
@@ -98,6 +98,48 @@
       border-radius: 12px;
       margin-top: 20px;
     }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00ffe055;
+    }
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    form input[type="email"] {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-right: 10px;
+      font-size: 1rem;
+    }
+    form button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      background: #00ffe0;
+      border: none;
+      cursor: pointer;
+    }
+    .nut-rocket {
+      position: fixed;
+      bottom: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      animation: rocketUp 5s infinite linear;
+      z-index: 999;
+    }
+    @keyframes rocketUp {
+      0% { bottom: -100px; opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { bottom: 120%; opacity: 0; }
+    }
     footer {
       font-size: 0.8rem;
       color: #aaa;
@@ -106,6 +148,7 @@
   </style>
 </head>
 <body>
+  <img src="nut-rocket.png" alt="Rocket Nut" class="nut-rocket" />
   <header>
     <img src="logo.png" alt="DsNuts Logo" class="logo" />
     <h1>DsNuts Coin</h1>
@@ -157,6 +200,24 @@
     <iframe src="https://www.dextools.io/widget-chart/en/bnb/pe-light/0x7a3DF99b0E8E444Bc42fc34cFa0D387aD798B043?theme=dark&chartType=2&interval=30"></iframe>
   </section>
 
+  <section class="gallery">
+    <h2>Meme Gallery</h2>
+    <div class="gallery-container">
+      <img src="meme1.jpg" alt="Meme 1">
+      <img src="meme2.jpg" alt="Meme 2">
+      <img src="meme3.jpg" alt="Meme 3">
+    </div>
+  </section>
+
+  <section class="airdrop">
+    <h2>Join the Airdrop</h2>
+    <p>Get free DsNuts just for being early. Enter your email and we'll hit you up when it's time to claim.</p>
+    <form onsubmit="event.preventDefault(); alert('You’re on the list! Stay nutty.');">
+      <input type="email" placeholder="Your email" required />
+      <button type="submit">Join Airdrop</button>
+    </form>
+  </section>
+
   <footer>
     © 2025 DsNuts Coin. All rights reserved.
   </footer>
@@ -168,7 +229,6 @@
       slap.play();
       window.open('https://pancakeswap.finance/swap?outputCurrency=0x7a3DF99b0E8E444Bc42fc34cFa0D387aD798B043', '_blank');
     }
-
     document.getElementById('buyBtn').addEventListener('click', slapAndBuy);
     document.getElementById('buyBtn2').addEventListener('click', slapAndBuy);
   </script>
