@@ -41,11 +41,12 @@
       cursor: pointer;
       transition: 0.3s ease;
       text-decoration: none;
-      display: inline-block;
     }
     .btn:hover {
       background: #ff3399;
-      transform: scale(1.1);
+    }
+    .btn:active {
+      transform: scale(0.95);
     }
     .social {
       margin: 30px 0;
@@ -78,35 +79,33 @@
       border-left: 5px solid #00ffe0;
       border-radius: 8px;
     }
+    .chart {
+      text-align: center;
+    }
+    .chart p {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
     footer {
       font-size: 0.8rem;
       color: #aaa;
       padding-bottom: 30px;
     }
-    .why-buy {
-      max-width: 700px;
-      margin: 40px auto;
-      font-size: 1.2rem;
-      color: #eee;
-    }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png.jpg" alt="DsNuts Logo" class="logo" />
+    <img src="logo.png" alt="DsNuts Logo" class="logo" />
     <h1>DsNuts Coin</h1>
     <p class="slogan">The only coin that slaps harder than the real ones.</p>
-    <a class="btn" id="buyButton" href="https://pancakeswap.finance/swap?outputCurrency=0x7a3DF99b0E8E444Bc42fc34cFa0D387aD798B043" target="_blank">Buy $DSNT</a>
+    <button class="btn" id="buyBtn">Buy $DSNT</button>
     <audio id="slapSound" src="slap.mp3"></audio>
   </header>
 
-  <section class="why-buy">
-    <h2>Why Buy $DSNT?</h2>
-    <p>Because this ain’t just another meme coin — it’s a movement. $DSNT was born to go viral, powered by a community of degens, creators, and meme warlords. No taxes, no BS, just pure slap energy. Ride the wave early and laugh your way to the moon 🌕💥.</p>
-  </section>
-
   <section class="social">
-    <a href="https://x.com/dsnutscoin" target="_blank">X (Twitter)</a>
+    <a href="https://x.com/dsnutscoin" target="_blank">Twitter</a>
+    <a href="https://t.me/dsnutscoin" target="_blank">Telegram</a>
     <a href="https://www.instagram.com/dsnutscoin/" target="_blank">Instagram</a>
     <a href="https://www.tiktok.com/@dsnutscoin?lang=en" target="_blank">TikTok</a>
   </section>
@@ -125,18 +124,18 @@
   <section class="tokenomics">
     <h2>Tokenomics</h2>
     <ul>
-      <li><strong>Total Supply:</strong> 69,420,000,000 $DSNT</li>
-      <li><strong>Liquidity Pool:</strong> 90%</li>
-      <li><strong>Marketing & Growth:</strong> 5%</li>
-      <li><strong>Team (locked):</strong> 5%</li>
-      <li><strong>Buy/Sell Tax:</strong> 0% (Because we don’t play games)</li>
+      <li><strong>Total Supply:</strong> 69,420,000,000 DSNT</li>
+      <li><strong>Liquidity:</strong> Locked 🔐</li>
+      <li><strong>Tax:</strong> 0% Buy / 0% Sell (For now 😉)</li>
+      <li><strong>Ownership:</strong> Renounced 💯</li>
+      <li><strong>Chain:</strong> BNB Smart Chain (BEP-20)</li>
     </ul>
   </section>
 
   <section class="chart">
-    <h2>Live Chart</h2>
+    <h2>Track the Nuttiest Moves</h2>
     <p>Track the nuttiest moves on DexTools:</p>
-    <a class="btn" href="https://www.dextools.io/app/en/bnb/pair-explorer/0x..." target="_blank">View $DSNT Chart</a>
+    <a class="btn" href="https://www.dextools.io/app/en/bnb/pair-explorer/0x7a3DF99b0E8E444Bc42fc34cFa0D387aD798B043" target="_blank">View $DSNT Chart</a>
   </section>
 
   <footer>
@@ -144,11 +143,11 @@
   </footer>
 
   <script>
-    const buyBtn = document.getElementById('buyButton');
-    const slapSound = document.getElementById('slapSound');
-
-    buyBtn.addEventListener('click', () => {
-      slapSound.play();
+    document.getElementById('buyBtn').addEventListener('click', function () {
+      const slap = document.getElementById('slapSound');
+      slap.currentTime = 0;
+      slap.play();
+      window.open('https://pancakeswap.finance/swap?outputCurrency=0x7a3DF99b0E8E444Bc42fc34cFa0D387aD798B043', '_blank');
     });
   </script>
 </body>
