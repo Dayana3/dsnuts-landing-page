@@ -1,4 +1,4 @@
-<!DOCTYPE html>, 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -99,16 +99,14 @@
       border-radius: 12px;
       margin-top: 20px;
     }
-    .rocket img {
-      max-width: 180px;
-      animation: lift 3s infinite ease-in-out;
+    .nut-rocket {
+      width: 180px;
       display: block;
-      margin: 20px auto 0;
+      margin: 40px auto;
+      transition: transform 0.5s ease-out;
     }
-    @keyframes lift {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0); }
+    .nut-rocket.in-view {
+      transform: translateY(-100px) rotate(-20deg) scale(1.1);
     }
     .email input {
       padding: 12px;
@@ -158,12 +156,12 @@
 
   <section class="meme-gallery">
     <h2>🔥 Meme Gallery</h2>
-    <img src="memes-dsnuts.png" alt="DsNuts Memes" style="max-width: 100%; border-radius: 12px; box-shadow: 0 0 20px rgba(0,255,255,0.3);" />
+    <img src="https://cdn.jsdelivr.net/gh/Dayana3/assets/meme-rent-dsnuts.png" alt="DsNuts Meme Collage" style="max-width: 100%; border-radius: 12px; box-shadow: 0 0 20px rgba(0,255,255,0.3);" />
   </section>
 
   <section class="rocket">
     <h2>🚀 Nut Rocket Launch</h2>
-    <img src="nut-rocket.png" alt="Nut Rocket" />
+    <img src="https://cdn.jsdelivr.net/gh/Dayana3/assets/nut-rocket.png" alt="Nut Rocket" class="nut-rocket" />
   </section>
 
   <section class="roadmap">
@@ -215,9 +213,22 @@
       slap.play();
       window.open('https://pancakeswap.finance/swap?outputCurrency=0x7a3DF99b0E8E444Bc42fc34cFa0D387aD798B043', '_blank');
     }
+
     document.getElementById('buyBtn').addEventListener('click', slapAndBuy);
     document.getElementById('buyBtn2').addEventListener('click', slapAndBuy);
+
+    // Rocket animation on scroll
+    const nutRocket = document.querySelector('.nut-rocket');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          nutRocket.classList.add('in-view');
+        } else {
+          nutRocket.classList.remove('in-view');
+        }
+      });
+    });
+    observer.observe(nutRocket);
   </script>
 </body>
 </html>
-
