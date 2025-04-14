@@ -13,23 +13,28 @@
       color: white;
       text-align: center;
     }
+
     header {
       padding: 40px 20px;
     }
+
     img.logo {
       width: 200px;
       border-radius: 20px;
       box-shadow: 0 0 20px #00ffe0;
     }
+
     h1 {
       font-size: 3rem;
       margin-top: 20px;
     }
+
     p.slogan {
       font-size: 1.2rem;
       color: #ddd;
       margin-bottom: 40px;
     }
+
     .btn {
       padding: 15px 30px;
       margin: 10px;
@@ -43,62 +48,35 @@
       transition: 0.3s ease;
       text-decoration: none;
     }
+
     .btn:hover {
       background: #ff3399;
     }
-    .btn:active {
-      transform: scale(0.95);
-    }
+
     .social {
       margin: 30px 0;
     }
+
     .social a {
       margin: 0 10px;
       color: white;
       text-decoration: none;
       font-size: 1.4rem;
     }
+
     section {
       padding: 40px 20px;
     }
-    .roadmap, .tokenomics, .chart, .whybuy, .email {
-      max-width: 900px;
-      margin: 0 auto 60px;
-      text-align: left;
-      padding: 20px;
+
+    .email {
+      max-width: 700px;
+      margin: 0 auto;
       background-color: rgba(255, 255, 255, 0.05);
+      padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 0 10px #00000055;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
-    .roadmap h2, .tokenomics h2, .chart h2, .whybuy h2, .email h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffe0;
-    }
-    .roadmap ul, .tokenomics ul {
-      list-style: none;
-      padding: 0;
-    }
-    .roadmap li, .tokenomics li {
-      background: #ffffff10;
-      margin-bottom: 10px;
-      padding: 15px;
-      border-left: 5px solid #00ffe0;
-      border-radius: 8px;
-    }
-    .chart p, .whybuy p, .email p {
-      font-size: 1.1rem;
-      color: #fff;
-      margin-bottom: 15px;
-    }
-    iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
+
     .email input {
       padding: 12px;
       width: 70%;
@@ -108,6 +86,7 @@
       font-family: 'Bungee', sans-serif;
       font-size: 1rem;
     }
+
     .email button {
       padding: 10px 30px;
       border: none;
@@ -119,6 +98,12 @@
       font-family: 'Bungee', sans-serif;
       font-weight: bold;
     }
+
+    footer {
+      padding: 30px;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
@@ -126,8 +111,7 @@
     <img src="logo.png" alt="DsNuts Logo" class="logo" />
     <h1>DsNuts Coin</h1>
     <p class="slogan">The only coin that slaps harder than the real ones.</p>
-    <button class="btn" id="buyBtn">Buy $DSNT</button>
-    <audio id="slapSound" src="slap.mp3"></audio>
+    <button class="btn" onclick="window.open('https://pancakeswap.finance/swap?outputCurrency=0x7a3DF99b0E8E444Bc42fc34cFa0D387aD798B043', '_blank')">Buy $DSNT</button>
   </header>
 
   <section class="social">
@@ -137,48 +121,14 @@
     <a href="https://www.tiktok.com/@dsnutscoin?lang=en" target="_blank">TikTok</a>
   </section>
 
-  <section class="whybuy">
-    <h2>Why Buy DsNuts?</h2>
-    <p>Because you like fun. Because you like gains. Because you're tired of utility this and real-world use-case that.</p>
-    <p><strong>DsNuts</strong> is here to bring chaos to the charts and laughs to your wallet. It's meme magic meets BNB-chain speed — with a sprinkle of degenerate dreams and viral juice.</p>
-    <p>Whether you’re in it for the memes, the mayhem, or the moonshots — you’re early. Let’s make some noise, cause some whiplash, and slap the market where it hurts. 🚀</p>
-    <p style="text-align:center;"><button class="btn" id="buyBtn2">Slap the Buy Button</button></p>
-  </section>
-
-  <section class="roadmap">
-    <h2>Roadmap</h2>
-    <ul>
-      <li><strong>Phase 1:</strong> Token launch & liquidity pool</li>
-      <li><strong>Phase 2:</strong> Build hype — viral memes, TikToks, Insta reels</li>
-      <li><strong>Phase 3:</strong> Community contests & airdrops</li>
-      <li><strong>Phase 4:</strong> CEX listings & influencer partnerships</li>
-      <li><strong>Phase 5:</strong> DsNuts merch + NFTs + memeverse expansion</li>
-    </ul>
-  </section>
-
-  <section class="tokenomics">
-    <h2>Tokenomics</h2>
-    <ul>
-      <li><strong>Total Supply:</strong> 69,420,000,000 DSNT</li>
-      <li><strong>Liquidity:</strong> Locked 🔐</li>
-      <li><strong>Tax:</strong> 0% Buy / 0% Sell (For now 😉)</li>
-      <li><strong>Ownership:</strong> Renounced 💯</li>
-      <li><strong>Chain:</strong> BNB Smart Chain (BEP-20)</li>
-    </ul>
-  </section>
-
-  <section class="chart">
-    <h2>Live Chart</h2>
-    <p>Track the nuttiest moves below:</p>
-    <iframe src="https://www.dextools.io/widget-chart/en/bnb/pe-light/0x7a3DF99b0E8E444Bc42fc34cFa0D387aD798B043?theme=dark&chartType=2&interval=30"></iframe>
-  </section>
-
   <section class="email">
     <h2>Join the Airdrop</h2>
     <p>Drop your email to get early access to giveaways and exclusive memes.</p>
-    <form onsubmit="event.preventDefault(); alert('Thanks, legend! You’re on the list ✉️');">
-      <input type="email" placeholder="Enter your email" required />
+    <form action="https://formsubmit.co/dsnuts.dsnt@gmail.com" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required />
       <br>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://dsnuts-landing-page.vercel.app/thank-you.html">
       <button type="submit">Join the Drop</button>
     </form>
   </section>
@@ -186,17 +136,5 @@
   <footer>
     © 2025 DsNuts Coin. All rights reserved.
   </footer>
-
-  <script>
-    function slapAndBuy() {
-      const slap = document.getElementById('slapSound');
-      slap.currentTime = 0;
-      slap.play();
-      window.open('https://pancakeswap.finance/swap?outputCurrency=0x7a3DF99b0E8E444Bc42fc34cFa0D387aD798B043', '_blank');
-    }
-
-    document.getElementById('buyBtn').addEventListener('click', slapAndBuy);
-    document.getElementById('buyBtn2').addEventListener('click', slapAndBuy);
-  </script>
 </body>
 </html>
