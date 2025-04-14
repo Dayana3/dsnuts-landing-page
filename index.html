@@ -61,7 +61,7 @@
     section {
       padding: 40px 20px;
     }
-    .roadmap, .tokenomics, .chart, .whybuy, .meme-gallery, .rocket, .email {
+    .roadmap, .tokenomics, .chart, .whybuy, .email {
       max-width: 900px;
       margin: 0 auto 60px;
       text-align: left;
@@ -70,7 +70,7 @@
       border-radius: 12px;
       box-shadow: 0 0 10px #00000055;
     }
-    .roadmap h2, .tokenomics h2, .chart h2, .whybuy h2, .meme-gallery h2, .rocket h2, .email h2 {
+    .roadmap h2, .tokenomics h2, .chart h2, .whybuy h2, .email h2 {
       text-align: center;
       font-size: 2rem;
       margin-bottom: 20px;
@@ -98,15 +98,6 @@
       border: none;
       border-radius: 12px;
       margin-top: 20px;
-    }
-    .nut-rocket {
-      width: 180px;
-      display: block;
-      margin: 40px auto;
-      transition: transform 0.5s ease-out;
-    }
-    .nut-rocket.in-view {
-      transform: translateY(-100px) rotate(-20deg) scale(1.1);
     }
     .email input {
       padding: 12px;
@@ -152,16 +143,6 @@
     <p><strong>DsNuts</strong> is here to bring chaos to the charts and laughs to your wallet. It's meme magic meets BNB-chain speed — with a sprinkle of degenerate dreams and viral juice.</p>
     <p>Whether you’re in it for the memes, the mayhem, or the moonshots — you’re early. Let’s make some noise, cause some whiplash, and slap the market where it hurts. 🚀</p>
     <p style="text-align:center;"><button class="btn" id="buyBtn2">Slap the Buy Button</button></p>
-  </section>
-
-  <section class="meme-gallery">
-    <h2>🔥 Meme Gallery</h2>
-    <img src="https://cdn.jsdelivr.net/gh/Dayana3/assets/meme-rent-dsnuts.png" alt="DsNuts Meme Collage" style="max-width: 100%; border-radius: 12px; box-shadow: 0 0 20px rgba(0,255,255,0.3);" />
-  </section>
-
-  <section class="rocket">
-    <h2>🚀 Nut Rocket Launch</h2>
-    <img src="https://cdn.jsdelivr.net/gh/Dayana3/assets/nut-rocket.png" alt="Nut Rocket" class="nut-rocket" />
   </section>
 
   <section class="roadmap">
@@ -216,19 +197,6 @@
 
     document.getElementById('buyBtn').addEventListener('click', slapAndBuy);
     document.getElementById('buyBtn2').addEventListener('click', slapAndBuy);
-
-    // Rocket animation on scroll
-    const nutRocket = document.querySelector('.nut-rocket');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          nutRocket.classList.add('in-view');
-        } else {
-          nutRocket.classList.remove('in-view');
-        }
-      });
-    });
-    observer.observe(nutRocket);
   </script>
 </body>
 </html>
